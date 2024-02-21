@@ -14,6 +14,6 @@ module load samtools export
 PATH=$PATH:/rds/general/project/diantonio/live/tools/ROSE/ROSE-master/bin 
 mkdir annotation 
 cp $PBS_O_WORKDIR/hg38_refseq.ucsc annotation 
-ROSE_main.py -g hg38 -i $PBS_O_WORKDIR/macs_test/peo4_nolambda_2R_intersect.bed -r $PBS_O_WORKDIR/peo4_b1.dedup.bam -o peo4_SE 
+ROSE_main.py -g hg38 -i $pathto/peak_file.bed -r $pathto/alignment.bam -o peo4_SE 
 
 cp * $PBS_O_WORKDIR
