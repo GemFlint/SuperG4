@@ -5,3 +5,15 @@
 # -o refers to the output file prefix 
 # In summary, the command is running the ROSE_main.py script with specified input files (-i for BED file and -r for BAM file), specifying the reference genome (-g), and specifying the output prefix (-o). 
 
+#PBS -lwalltime=08:00:00 
+#PBS -lselect=1:ncpus=8:mem=100gb 
+
+module load anaconda3/personal 
+module load bedtools 
+module load samtools export 
+PATH=$PATH:/rds/general/project/diantonio/live/tools/ROSE/ROSE-master/bin 
+mkdir annotation 
+cp $PBS_O_WORKDIR/hg38_refseq.ucsc annotation 
+ROSE_main.py -g hg38 -i $PBS_O_WORKDIR/macs_test/peo4_nolambda_2R_intersect.bed -r $PBS_O_WORKDIR/peo4_b1.dedup.bam -o peo4_SE 
+
+cp * $PBS_O_WORKDIR
