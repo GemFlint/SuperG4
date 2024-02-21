@@ -1,2 +1,7 @@
 # In the directory you submit the job you need to have an annotation file for your genome, in my case “hg38_refseq.ucsc” – you can download this from the ucsc website for a lot of organisms, also can be found in: /rds/general/project/diantonio/live/tools/ROSE/ROSE-master/annotation/hg38_refseq.ucsc
 #	-g refers to genome build
+# -i refers to the .bed peak file that you want to analyse
+# -r refers to the .bam file of the aligned ChIP reads from ChIP-seq experiment 
+# -o refers to the output file prefix 
+# In summary, the command is running the ROSE_main.py script with specified input files (-i for BED file and -r for BAM file), specifying the reference genome (-g), and specifying the output prefix (-o). 
+
