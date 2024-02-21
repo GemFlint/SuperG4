@@ -1,1 +1,2 @@
-
+# In the directory you submit the job you need to have an annotation file for your genome, in my case “hg38_refseq.ucsc” – you can download this from the ucsc website for a lot of organisms, also can be found in: /rds/general/project/diantonio/live/tools/ROSE/ROSE-master/annotation/hg38_refseq.ucsc
+#	-g refers to genome build
