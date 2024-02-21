@@ -16,4 +16,4 @@ mkdir annotation
 cp $PBS_O_WORKDIR/hg38_refseq.ucsc annotation 
 ROSE_main.py -g hg38 -i $pathto/peak_file.bed -r $pathto/alignment.bam -o peo4_SE 
 
-cp * $PBS_O_WORKDIR
+cp -r * $PBS_O_WORKDIR
