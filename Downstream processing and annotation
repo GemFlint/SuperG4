@@ -15,3 +15,5 @@ bedtools intersect -u -a g4_peaks.bed -b SE_peaks.bed > g4_peaks_in_SEs.bed
 # This provides output of indiidual G4 peaks that are also in superG4 regions
 
 # Can annotate this file as usual:
+module load homer 
+annotatePeaks.pl  G4_in_SuperG4.bed hg38 > annotated_G4_in_SuperG4.bed 2> report_G4_in_SuperG4.bed
