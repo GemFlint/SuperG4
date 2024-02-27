@@ -1,0 +1,17 @@
+# first open _superstitched.table.txt file in excel
+
+# Copy into a new spreadsheet with column 1: chr, 2: start coordinate, 3: end cooridnate, 4: peak ID
+# DO NOT include header titles in your excel files
+# Number of lines represents how many superG4 regions you have 
+
+# save this file as tab-deliminted text file 
+
+# In HPC now convert to bed file using following code:
+mv file.txt file.bed 
+
+# Intersect your file of G4 peaks with the SuperG4 bed file you created: 
+bedtools intersect -u -a g4_peaks.bed -b SE_peaks.bed > g4_peaks_in_SEs.bed
+
+# This provides output of indiidual G4 peaks that are also in superG4 regions
+
+# Can annotate this file as usual:
